@@ -8,6 +8,26 @@
     font-style: normal;
 }
 
+:root {
+    --Blue-950: hsl(240, 38%, 20%);
+    --Gray-400: hsl(240, 18%, 77%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+article {
+    background-color: var(--Blue-950);  
+    color: white;
+    width: 100%;    
+
+    padding: 2rem;
+}
+
 
 
 
