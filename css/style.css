@@ -21,9 +21,7 @@
 }
 
 body {
-    background-image: url(../images/pattern-bg.svg);
-    background-image: url(../images/pattern-curve.svg);
-    background-image: url(../images/pattern-quotes.svg);
+    
     background-color: var(--Gray-400);  
     color: var(--Blue-950) !important;
     width: 100%;    
@@ -31,17 +29,21 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 1440px;
+    background-image: url(../images/pattern-quotes.svg),  url(../images/pattern-curve.svg), url(../images/pattern-bg.svg);
+    background-position: left top, left bottom, center right;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center;    
     gap: 2rem;
 }
 
-.card1 {
-    width: 100px;      
-    border-radius: 50%;
+.card {
+    width: calc( 100% / 2 - 1rem);      
+
 }
 
 ul {
