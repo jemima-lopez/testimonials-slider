@@ -51,6 +51,9 @@ body {
     width: calc( 100%);
     flex-shrink: 0;
     scroll-snap-align: start;  
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
 }
 
 img{
