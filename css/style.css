@@ -36,19 +36,26 @@ body {
     background-repeat: no-repeat; 
     gap: 2rem;
     padding: 2rem;
+    overflow: hidden;
+
 }
 
 .card {
-    width: 200%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;    
-    @include neo(1, 0.5rem, 0.5rem)  
+    display: flex;  
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;
 }
 
 .card1 {
-    width: calc( 100% / 2 );  
+    width: calc( 100%);
+    flex-shrink: 0;
+    scroll-snap-align: start;  
+}
+
+img{
+    display: flex;
+    
 }
 
 ul {
