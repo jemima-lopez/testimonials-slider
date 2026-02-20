@@ -26,6 +26,9 @@ body {
     color: var(--Blue-950) !important;
     width: 100%;    
     padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -37,7 +40,8 @@ body {
     gap: 2rem;
     padding: 2rem;
     overflow: hidden;
-
+    padding-top: 6rem;
+    padding-right: 4rem;
 }
 
 .card {
@@ -56,9 +60,33 @@ body {
     gap: 1.5rem;
 }
 
+.card1-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 300;
+    gap: 0.5rem;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--Blue-950);
+}
+
+.name {
+    color: var(--Blue-950);
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--Blue-950);
+    font-weight: 500;
+}
+
 img{
     display: flex;
-    
+    width: 60%;
 }
 
 ul {
