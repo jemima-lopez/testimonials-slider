@@ -97,6 +97,7 @@ ul {
     justify-content: center;
     align-items: center;
     background-color: lightblue;
+    list-style-type: none;
 }
 
 li {
