@@ -55,7 +55,7 @@ body {
     width: calc( 100%);
     flex-shrink: 0;
     scroll-snap-align: start;  
-    display: flex;
+    display: none;
     flex-direction: row;
     gap: 1.5rem;
 }
