@@ -35,13 +35,15 @@ body {
     width: 90%;
     max-width: 1440px;
     background-image: url(../images/pattern-quotes.svg),  url(../images/pattern-curve.svg), url(../images/pattern-bg.svg);
-    background-position: left top, left bottom, center right;
-    background-repeat: no-repeat; 
+    background-position: 20% 10%, left bottom, 90% center;
+    background-repeat: no-repeat;
+    background-size: auto, auto, 50% auto; 
     gap: 2rem;
     padding: 2rem;
     overflow: hidden;
-    padding-top: 6rem;
-    padding-right: 4rem;
+    padding-top: 4rem;
+    padding-right: 2rem;
+    position: relative;
 }
 
 .card {
@@ -52,12 +54,22 @@ body {
 }
 
 .card1 {
-    width: calc( 100%);
+    width:  100%;
     flex-shrink: 0;
     scroll-snap-align: start;  
-    display: none;
+    display: flex;
     flex-direction: row;
     gap: 1.5rem;
+    align-items: center;
+    position: relative;
+}
+
+.card1-image {
+    width: 40%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+    z-index: 2;
 }
 
 .card1-text {
@@ -70,8 +82,15 @@ body {
 
 p {
     font-size: 2rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
     color: var(--Blue-950);
+    font-weight: 300;
+}
+
+.line {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .name {
@@ -84,26 +103,18 @@ h3 {
     font-weight: 500;
 }
 
-img{
+.buttons {
+    position: absolute;
+    bottom: 2rem;
+    left: 6rem;
     display: flex;
-    width: 60%;
+    gap: 0;
+    width: auto;
+    height: auto;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+    border-radius: 3rem;
+    background-color: white;
 }
 
-ul {
-    width: 100%;
-    padding: 1rem;  
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    background-color: lightblue;
-    list-style-type: none;
-}
-
-li {
-    text-align: center;
-    background-color: indianred;
-}
-
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
