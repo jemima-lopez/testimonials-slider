@@ -1,41 +1,31 @@
-//Slides
 const slides = document.querySelectorAll('.card1');
-
-//Navegation buttons
-const tanyaBtn = document.getElementById('tanya-btn');
-const johnBtn = document.getElementById('john-btn');
-
-const buttons = [tanyaBtn, johnBtn];
-
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
 let currentSlide = 0;
 
-//Function to show the slide based on index
-function showSlide(index) 
-{ 
-    if(index < 0 || index >= slides.length) return; 
-    slides.forEach(slide => {slide.style.display = 'none';
-});
-
-//Remove active class from all buttons
-buttons.forEach(btn => {
-    btn.classList.remove("active");
-});
-
-slides[index].style.display = "flex";
-
-buttons[index].classList.add("active");
-
-currentIndex = index;
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.style.display = 'flex';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
 }
 
-//Event listeners for buttons
-tanyaBtn.addEventListener("click", () => {
-    showSlide(0);
-});
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
 
-johnBtn.addEventListener("click", () => {
-    showSlide(1);
-});
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
 
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+// Mostrar el primer slide inicialmente
 showSlide(0);
 

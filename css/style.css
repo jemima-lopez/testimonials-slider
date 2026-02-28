@@ -105,8 +105,8 @@ h3 {
 
 .buttons {
     position: absolute;
-    bottom: 2rem;
-    left: 6rem;
+    bottom: 0.7rem;
+    right: 26rem;
     display: flex;
     gap: 0;
     width: auto;
@@ -114,6 +114,33 @@ h3 {
     box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
     border-radius: 3rem;
     background-color: white;
+}
+
+.buttons button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: var(--Gray-400);
+}
+
+#prev-bnt {
+    background-image: url('../images/icon-prev.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3rem 0 0 3rem;
+}
+
+#next-bnt {
+    background-image: url('../images/icon-next.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 3rem 3rem 0;
 }
 
 .attribution { font-size: 11px; text-align: center; }
